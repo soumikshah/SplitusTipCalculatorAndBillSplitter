@@ -18,7 +18,7 @@ class TipCalculatorFragment : Fragment(), CalcDialog.CalcDialogCallback {
     private var calculate: Button? = null
     private var finalAmountText: TextView? = null
     private var shareButton: ImageButton? = null
-    private var calculatorButton:ImageButton? = null
+    private var calculatorButton: ImageButton? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,12 +46,11 @@ class TipCalculatorFragment : Fragment(), CalcDialog.CalcDialogCallback {
         calculatorButton!!.setOnClickListener {
             calcDialog.settings.initialValue = null
             calcDialog.settings.isZeroShownWhenNoValue = false
-            calcDialog.show(childFragmentManager,"Calc Dialog")
+            calcDialog.show(childFragmentManager, "Calc Dialog")
         }
 
         return view
     }
-
 
 
     private fun calculateAmountAndSetIt() {
@@ -69,7 +68,7 @@ class TipCalculatorFragment : Fragment(), CalcDialog.CalcDialogCallback {
                     .toDouble()
             val totalAmountToBePaid = totalAmount!!.text.toString().toDouble() + percentage
             val finalText = "Total amount to be paid after adding tip would be " +
-                    "${totalAmountToBePaid.roundToInt()} - Splitus"
+                    "${totalAmountToBePaid.roundToInt()}"
             finalAmountText!!.text = finalText
         } else {
             Toast.makeText(
@@ -82,7 +81,7 @@ class TipCalculatorFragment : Fragment(), CalcDialog.CalcDialogCallback {
     private fun shareAmount() {
         val shareText = Intent(Intent.ACTION_SEND)
         shareText.type = "text/plain"
-        val dataToShare = "${finalAmountText!!.text}"
+        val dataToShare = "${finalAmountText!!.text}+ - Splitus"
         shareText.putExtra(Intent.EXTRA_SUBJECT, "Total amount after adding tip")
         shareText.putExtra(Intent.EXTRA_TEXT, dataToShare)
         startActivity(Intent.createChooser(shareText, "Share Via"))

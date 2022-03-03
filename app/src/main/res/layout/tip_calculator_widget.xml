@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.SplitusCalculateTipsSplitAmountWithFriends.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.SplitusCalculateTipsSplitAmountWithFriends.AppWidgetContainer"
+    android:background="#007AB8">
+        <TextView
+            android:id="@+id/calculateTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center"
+            android:text="@string/calculate_tip"
+            android:textColor="#fff" />
+</RelativeLayout>

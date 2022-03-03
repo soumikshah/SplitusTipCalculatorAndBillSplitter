@@ -11,4 +11,8 @@
     <string name="dummy_number_people">6</string>
     <string name="dummy_split_text">Total amount of 499 divided amongst 6 people will be 83.33</string>
     <string name="enter_valid_amount">Please enter valid total amount value!</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">Calculate tips</string>
+    <string name="calculate_tip">Calculate Tip</string>
 </resources>
