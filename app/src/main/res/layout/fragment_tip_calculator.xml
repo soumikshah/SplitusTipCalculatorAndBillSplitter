@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#007AB8">
+
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="55dp"
+        android:padding="5dp"
+        android:text="@string/total_amount"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:ems="6"
+        android:textColor="#fff"
+        android:hint="@string/dummy_amount"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/totalAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="40dp"
+        android:padding="5dp"
+        android:text="@string/tip_percent"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmount" />
+
+    <EditText
+        android:id="@+id/enterTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="15dp"
+        android:ems="5"
+        android:hint="@string/dummy_tip_percent"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="#fff"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/tip"
+        app:layout_constraintTop_toBottomOf="@+id/enterTotalAmount"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#47C2FF"
+        android:text="@string/calculate"
+        android:textColor="#283593"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterTipPercent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/totalAmountToBePaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="7dp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/share_button"
+        android:minHeight="48dp"
+        android:src="@drawable/share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmountToBePaid"
+        app:srcCompat="@drawable/share"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/calculatorButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/calculate"
+        android:src="@drawable/calculator_blue"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calculator_blue" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

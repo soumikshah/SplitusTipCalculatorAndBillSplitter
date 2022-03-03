@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8BCA16">
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="55dp"
+        android:padding="5dp"
+        android:text="@string/total_amount"
+        android:textColor="#5D4037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/enterTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="50dp"
+        android:ems="6"
+        android:hint="@string/dummy_amount"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="#5D4037"
+        app:layout_constraintStart_toEndOf="@+id/totalAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="55dp"
+        android:padding="5dp"
+        android:text="@string/number_of_people"
+        android:textColor="#5D4037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmount" />
+
+    <EditText
+        android:id="@+id/enterNumberOfPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="3"
+        android:hint="@string/dummy_number_people"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:padding="5dp"
+        android:textColor="#5D4037"
+        app:layout_constraintStart_toEndOf="@+id/totalPerson"
+        app:layout_constraintTop_toBottomOf="@+id/enterTotalAmount" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#3F5C0A"
+        android:text="@string/calculate"
+        android:textColor="#AEEA00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterNumberOfPeople" />
+
+    <TextView
+        android:id="@+id/totalAmountToBePaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:textColor="#5D4037"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+    <ImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/share_button"
+        android:minHeight="48dp"
+        android:src="@drawable/share_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalAmountToBePaid"
+        app:srcCompat="@drawable/share_green"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/calculatorButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:contentDescription="@string/calculate"
+        android:src="@drawable/calculator_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calculator_green" />
+</androidx.constraintlayout.widget.ConstraintLayout>

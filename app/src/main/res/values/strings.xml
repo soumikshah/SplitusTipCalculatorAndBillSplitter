@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Splitus - Calculate Tips &amp; Split amount with friends</string>
+    <string name="total_amount">Total Amount:</string>
+    <string name="dummy_amount">499.99</string>
+    <string name="tip_percent">Tip Percent:</string>
+    <string name="dummy_tip_percent">20%</string>
+    <string name="calculate">Calculate</string>
+    <string name="dummy_total_amount_to_be_paid">Total amount after adding tip will be 599.98</string>
+    <string name="share_button">Share</string>
+    <string name="number_of_people">Number Of People:</string>
+    <string name="dummy_number_people">6</string>
+    <string name="dummy_split_text">Total amount of 499 divided amongst 6 people will be 83.33</string>
+    <string name="enter_valid_amount">Please enter valid total amount value!</string>
+</resources>
